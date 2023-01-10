@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @yxy67
 - 👀 I’m interested in cs
-- 🌱 I’m currently learning various ca tips
+- 🌱 I’m currently learning various cs tips
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 
