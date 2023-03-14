@@ -1,0 +1,49 @@
+import pandas as pd
+dataset = pd.read_csv('D:\各种app\Pycharm\PyCharm代码\py031301\py002\world_population.csv', index_col=0)
+
+# print(dataset.head())
+# print(dataset.shape)
+#
+# print(dataset["1961"].mean())
+# print(dataset["2015"].mean())
+# 前十行平均值
+print(dataset.mean(axis=1).head(10))
+print(dataset.mean())
+
+
+
+import pandas as pd
+dataset = pd.read_csv('D:\各种app\Pycharm\PyCharm代码\py031301\py002\world_population.csv',index_col=0)
+
+# print(dataset[0: 2])
+# print(dataset.iloc[[2]].mean(axis=1))  # 第三行平均值
+
+# print(dataset.iloc[[-1]].mean(axis=1))  # 最后一行的平均值
+# print(dataset.iloc[[-1]].median(axis=1))  # 最后一行的中位数
+
+# loc索引满足条件的列
+# print(dataset.loc[["Germany"]].mean(axis=1))  # 德国人口密度
+# print(dataset.loc[["China"]].mean(axis=1))  # 中国人口密度
+# print(dataset.loc[["United States"]].mean(axis=1))  # 美国人口密度
+
+# 倒数三行中位数
+# print(dataset[-3:].median(axis=1))
+
+# 前十行中位数
+# print(dataset.head(10).median(axis=1))
+# print(dataset[:10].median(axis=1))
+
+# 方差
+# tail方法显示后五行
+print(dataset.var().tail())
+
+# pandas与numpy的类似操作(交互性操作)
+import numpy as np
+# 列操作"",若无引号其实依然为行操作
+print("pandas", dataset["2015"].mean())
+print("numpy", np.mean(dataset["2015"]))
+
+
+
+
+
