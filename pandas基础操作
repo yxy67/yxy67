@@ -44,6 +44,48 @@ print("pandas", dataset["2015"].mean())
 print("numpy", np.mean(dataset["2015"]))
 
 
+import pandas
+import pandas as pd
+datatxt = pandas.read_csv('D:\各种app\Pycharm\PyCharm代码\py031301\py002\world_population.csv', index_col=0)
+
+# 查找名为"2000"的列
+# print(datatxt["2000"])
+
+# loc, iloc为行查找
+# print(datatxt.iloc[0])
+# print(datatxt.iloc[-1])
+# print(datatxt.loc["Germany"])
+# print(datatxt["2015"].loc["Germany"])  # 利用查找机制查询德国2015年的人口密度信息
+
+# 类型查看
+# print(type(datatxt))  # <class 'pandas.core.frame.DataFrame'>
+# print(type(datatxt.iloc[0]))  # <class 'pandas.core.series.Series'>
+
+# 切片
+# print(datatxt.iloc[0: 10])  # slice of the first 10 rows
+# print(datatxt.loc[["Germany", "India", "China"]])
+# print(datatxt.loc[["Germany", "India"]][["1970", "1990"]])  # 超级牛逼且实用的方法
+
+
+# 迭代 DataFrame位于较高层次，且每行的迭代可以单独完成
+# for index, row in datatxt.iterrows():
+#     print(index, row)
+
+# Series类型
+# Series 是一个一维的标记数据
+import numpy as np
+numarr = np.array(['p', 'y', 't', 'h', 'o', 'n'])
+print(numarr)
+ser = pd.Series(numarr)
+print(ser)
+print(type(ser))
+
+plist = ['p', 'y', 't', 'h', 'o', 'n']
+ser = pd.Series(plist)
+print(ser)
+print(type(ser))
+
+
 
 
 
